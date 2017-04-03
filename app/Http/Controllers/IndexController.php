@@ -1,18 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2017/3/30
- * Time: 18:15
- */
-namespace app\Http\Controllers;
 
-use Illuminate\Routing\Controller;
+namespace App\Http\Controllers;
 
-class IndexController extends Controller{
-    
-    public function user(){
-        echo "1111111";
+use Illuminate\Http\Request;
+
+use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
+
+class IndexController extends Controller
+{
+    public function index(){
+        $pdo = DB::connection()->getPdo();
+        dd($pdo);
     }
-    
 }
